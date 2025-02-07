@@ -27,6 +27,9 @@ class CategoryController extends Controller
         return view('timer');
 
     }
+    public function halo () {
+        return view('halloweeni');
+    }
     public function show($id)
     {
         // $categoryModel = new Categories();
