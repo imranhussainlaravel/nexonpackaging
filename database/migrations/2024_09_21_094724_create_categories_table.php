@@ -14,11 +14,14 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
+            $table->text('content');
+            $table->string('icon');
             $table->string('header_img');
             $table->string('main_img');
             $table->enum('status',['active', 'inactive']);
             $table->integer('nav_id');
+            $table->integer('sorting');
             $table->timestamps();
         });
     }

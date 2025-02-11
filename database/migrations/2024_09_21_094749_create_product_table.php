@@ -14,12 +14,16 @@ return new class extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->integer('category_id');
-            $table->string('description');
+            $table->text('description');
+            $table->text('content');
+            $table->integer('industry_id');
+            $table->integer('material_id');
+            $table->integer('style_id');
             $table->string('image_1');
             $table->string('image_2');
             $table->string('image_3');
             $table->string('image_4');
+            $table->string('image_5');
             $table->enum('status',['active', 'inactive']);
             $table->timestamps();
         });

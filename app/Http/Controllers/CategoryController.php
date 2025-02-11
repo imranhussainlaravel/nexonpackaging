@@ -20,7 +20,7 @@ class CategoryController extends Controller
         ->get();
 
 
-        return view('index' , compact('categories'));
+        return view('layouts.header' , compact('categories'));
 
     }
     public function timmer(){
